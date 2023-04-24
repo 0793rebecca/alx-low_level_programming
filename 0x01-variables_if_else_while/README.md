@@ -1,1 +1,1 @@
-0x01. C - Variables, if, else, while
+Patience, persistence and perspiration make an unbeatable combination for success
