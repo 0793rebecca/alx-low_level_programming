@@ -1,9 +1,8 @@
 #include "main.h"
 /**
  * main - check the code.
- * description: 'function that checks for alphabetic character'
- * _isalpha - Shows 1 if the input is a
- * letter Another cases, shows 0
+ * _isalpha - 'Shows 1 if the input is a
+ * letter Another cases, shows 0'
  *
  * @c: The character in ASCII code
  *
