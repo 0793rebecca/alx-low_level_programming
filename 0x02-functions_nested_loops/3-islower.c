@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * main - check the code.
- * Description: 'lowercase character. Another cases, shows'
+ * Description: 'islower'
+ * lowercase character. Another cases, shows
  * 0
  *
  * @c: The character is in ASCII code
