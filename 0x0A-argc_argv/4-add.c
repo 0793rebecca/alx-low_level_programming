@@ -4,30 +4,19 @@
 /**
  * _isdigit - check for a digit
  * @c: digit to be checked
- * Return: Always 0 (Success)
+ * Return: Always 1 (Success) else 0
  */
 int _isdigit(int c)
 {
-		/*Declaring variables*/
-		unsigned int count;
-
-
-		count = 0;
-		while (count < strlen(str)) /*count string*/
-
-
+		if (c >= '0' && c <= '9')
 		{
-			if (!isdigit(str[count])) /*check if str there are digit*/
-			{
-				return (0);
-			}
-
-
-			count++;
+			return (1);
 		}
-		return (1);
-	}
-
+		else
+		{
+			return (0);
+		}
+}
 
 /**
  * main - adds positive integers
@@ -37,38 +26,28 @@ int _isdigit(int c)
  */
 int main(int argc, char *argv[])
 {
-		/*Declaring variables*/
-		int count;
-		int str_to_int;
-		int sum = 0;
+		int a = 0;
+		int b;
+		int c;
 
-
-		count = 1;
-		while (count < argc) /*Goes through the whole array*/
+		if (argc == 1)
 		{
-			if (check_num(argv[count]))
-
-
-			{
-				str_to_int = atoi(argv[count]); /*ATOI --> convert string to int*/
-				sum += str_to_int;
-			}
-
-
-			/*Condition if one of the number contains symbols that are not digits*/
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-
-
-			count++;
+			printf("0\n");
+			return (0);
 		}
 
-
-		printf("%d\n", sum); /*print sum*/
-
-
-		return (0);
-	}
+		for (b = 1; b < argv; b++)
+		{
+			for (c = 0; argv[b][c] != '\0'; c++
+					{
+					if (!_isdigit(argv[b][c]))
+					{
+					printf("Error\n");
+					return (1);
+					}
+				}
+					a += atoi(argv[b]);
+				}
+				printf("%d\n", a);
+				return (0);
+}
