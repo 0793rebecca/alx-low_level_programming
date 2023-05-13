@@ -4,7 +4,8 @@
 /**
  * _isdigit - check for a digit
  * @c: digit to be checked
- * Return: 1 (Success) else 0
+ * Return: 1 if a digit
+ * else 0
  */
 int _isdigit(int c)
 {
@@ -22,7 +23,7 @@ int _isdigit(int c)
  * main - adds positive integers
  * @argc: array arguments
  * @argv: number of arguments
- * Return: 0 (Success) else 1
+ * Return: 0 (success) else 1
  */
 int main(int argc, char *argv[])
 {
