@@ -30,19 +30,13 @@ int _isdigit(int c)
 
 
 /**
- * main - Print the name of the program
- * @argc: Count arguments
- * @argv: Arguments
- * Return:Always 0 (Success)
+ * main - adds positive integers
+ * @argc: array arguments
+ * @argv: number of arguments
+ * Return:Always 0 (Success) else 1
  */
-
-
-	int main(int argc, char *argv[])
-
-
-	{
-
-
+int main(int argc, char *argv[])
+{
 		/*Declaring variables*/
 		int count;
 		int str_to_int;
