@@ -20,31 +20,30 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 	{
 		s2 = " ";
-		i = k = 0;
 	}
+
 	while (s1[i] != '\0')
 	{
 		i++;
 	}
+
 	while (s2[k] != '\0')
 	{
 		k++;
 	}
 	r = malloc((i + k + 1) * sizeof(char));
+
 	if (r == NULL)
 	{
 		return (NULL);
-	i = k = 0;
 	}
-	while (s1[i] != '\0')
+	for (i = 0; i < s1; i++)
 	{
 		r[i] = s1[i];
-		i++;
 	}
-	while (s2[k] != '\0')
+	for (k = 0; k < s2; k++, k++)
 	{
 		r[i] = s2[k];
-		i++, k++;
 	}
 	r[i] = '\0';
 	return (r);
