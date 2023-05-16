@@ -1,1 +1,1 @@
-0x0B. C - malloc, freei
+0x0B. C - malloc,free
