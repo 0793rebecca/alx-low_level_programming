@@ -6,12 +6,12 @@
  * str_concat - concatenates two strings
  * @s1: input one
  * @s2: input two
- * Return: Null
+ * Return: s1 and s2
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *r;
-	int i, k;
+	int i, acc;
 
 	if (s1 == NULL)
 	{
@@ -27,23 +27,26 @@ char *str_concat(char *s1, char *s2)
 		i++;
 	}
 
-	while (s2[k] != '\0')
+	while (s2[acc] != '\0')
 	{
-		k++;
+		acc++;
 	}
-	r = malloc((i + k + 1) * sizeof(char));
+	r = malloc((i + acc + 1) * sizeof(char));
 
 	if (r == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < s1; i++)
+	i = acc = 0;
+	while (s1[i] != '\0')
 	{
 		r[i] = s1[i];
+		i++;
 	}
-	for (k = 0; k < s2; k++, k++)
+	while (s2[acc] != '\0')
 	{
-		r[i] = s2[k];
+		acc[i] = s2[i];
+		i++, acc++;
 	}
 	r[i] = '\0';
 	return (r);
