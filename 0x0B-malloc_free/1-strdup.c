@@ -4,10 +4,9 @@
 
 /**
  * _strdup -  returns a pointer to a newly allocated space in memory
- * @c: the character address
- * @size: the size of memory
+ * @str: the character address
  *
- * Return: Null
+ * Return:Null
  */
 char *_strdup(char *str)
 {
