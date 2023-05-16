@@ -3,9 +3,9 @@
 #include <stdlib.h>
 
 /**
- * create_array - to create array of char
+ * create_array - to create array of char c
  * @c: the character of whose address is being returned
- * @size: the size of the memory to print
+ * @size: the size of array
  *
  * Return: Null
  */
@@ -14,7 +14,7 @@ char *create_array(unsigned int size, char c)
 	char *r;
 	unsigned int f;
 
-	if size == 0
+	if (size == 0)
 	{
 		return (NULL);
 	}
@@ -24,8 +24,7 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-
-	for (f = 0; f < sizw; f++)
+	for (f = 0; f < size; f++)
 	{
 		r[f] = c;
 	}
