@@ -5,16 +5,17 @@
 
 /**
  * malloc_checked - function that allocates memory using malloc
- * @s - number of bytes to allocate
- * Return:pointer to the allocated memory
- * if malloc fails,value is equal to 98
+ * @b: number of memory to allocate
+ * Return: 0
  */
 void *malloc_checked(unsigned int b)
 {
-	char *m;
+	void *m;
 
 	m = malloc(b);
 	if (m == NULL)
+	{
 		exit(98);
+	}
 	return (m);
 }
