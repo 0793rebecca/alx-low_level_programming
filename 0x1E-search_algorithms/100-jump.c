@@ -11,46 +11,25 @@
 
 int jump_search(int *array, size_t size, int value)
 {
-	if (array == NULL || size == 0) {
-        return -1;
-    }
-	size_t jump_step = sqrt(size);
-    size_t prev = 0;
-while (array[prev] < value) {
-        printf("Value checked array[%lu] = [%d]\n", prev, array[prev]);
+	size_t i, jump, step;
 
-        prev += jump_step;
+	if (array == NULL || size == 0)
+		return (-1);
 
-        if (prev >= size) {
-            prev = size - 1;
-            break;
-        }
-    }
+	step = sqrt(size);
+	for (i = jump = 0; jump < size && array[jump] < value;)
+	{
+		printf("Value checked array[%ld] = [%d]\n", jump, array[jump]);
+		i = jump;
+		jump += step;
+	}
 
-    size_t i;
-    for (i = prev - jump_step; i <= prev && i < size; ++i) {
-        printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+	printf("Value found between indexes [%ld] and [%ld]\n", i, jump);
 
-        if (array[i] == value) {
-            return i;
-        }
-	    }
+	jump = jump < size - 1 ? jump : size - 1;
+	for (; i < jump && array[i] < value; i++)
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+	printf("Value checked array[%ld] = [%d]\n", i, array[i]);
 
-    return -1;
-}
-
-int main() {
- int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    size_t size = sizeof(arr) / sizeof(arr[0]);
-    int value_to_search = 7;
-
-    int result = jump_search(arr, size, value_to_search);
-
-    if (result != -1) {
-        printf("Value %d found at index %d\n", value_to_search, result);
-    } else {
-        printf("Value %d not found in the array\n", value_to_search);
-    }
-
-    return 0;
+	return (array[i] == value ? (int)i : -1);
 }
